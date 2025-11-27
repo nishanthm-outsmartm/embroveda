@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH="/home/${USER}/public_html/"
+    - export DEPLOYPATH="/main/embroveda"
     - /usr/local/bin/npm ci
     - /usr/local/bin/npm run build
     - /bin/rsync -a --delete dist/ "$DEPLOYPATH"
